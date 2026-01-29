@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Substrato para Cogumelos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Calculadora de Substrato</h1>
+        <p>
+          Ajuste a humidade e o número de sacos para obter a mistura ideal.
+        </p>
+      </header>
+
+      <section class="card">
+        <form id="mix-form">
+          <label class="field">
+            <span>Humidade desejada (%)</span>
+            <input
+              type="number"
+              id="humidity"
+              min="50"
+              max="80"
+              step="1"
+              value="65"
+              required
+            />
+            <small>Intervalo recomendado: 60–70%</small>
+          </label>
+
+          <label class="field">
+            <span>Número de sacos (3 kg cada)</span>
+            <input
+              type="number"
+              id="bags"
+              min="1"
+              step="1"
+              value="10"
+              required
+            />
+          </label>
+
+          <button type="submit">Calcular mistura</button>
+        </form>
+      </section>
+
+      <section class="card output" aria-live="polite">
+        <h2>Resultados</h2>
+        <ul id="results">
+          <li>Preencha os campos e clique em calcular.</li>
+        </ul>
+      </section>
+
+      <section class="card notes">
+        <h2>Regras fixas</h2>
+        <ul>
+          <li>Farinha de trigo: 12% da matéria seca.</li>
+          <li>Pellets de madeira: 88% da matéria seca.</li>
+          <li>Cada saco possui 3 kg de substrato final.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
